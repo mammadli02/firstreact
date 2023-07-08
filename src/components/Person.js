@@ -9,7 +9,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import { BsBrowserSafari } from "react-icons/bs";
+import { BsBrowserSafari,BsFillBasketFill } from "react-icons/bs";
 
 export class Person extends Component {
 
@@ -22,19 +22,21 @@ export class Person extends Component {
 <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          >
+            >
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+            <BsFillBasketFill style={{fontSize:"30px"}}/> <span style={{fontSize:"20px", marginLeft:"10px"}}>Count</span>
+
+          <Button style={{marginLeft:"20px"}}
+          color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>

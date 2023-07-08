@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import { Button } from '@mui/material';
-import { BsFillAirplaneEnginesFill } from "react-icons/bs";
+import { BsPersonCircle } from "react-icons/bs";
 export class PersonCard extends Component {
   // const [datas, setDatas]=useState([])
   handleDelete = (dataId) => {
@@ -40,7 +40,7 @@ SORTED Age
 </Button> */}
  
 <Card  >
-< BsFillAirplaneEnginesFill/> 
+< BsPersonCircle style={{fontSize:"20px"}}/> 
       <CardMedia
         sx={{ height: 140 }}
         image={this.props.image}
@@ -57,11 +57,11 @@ SORTED Age
         </Typography>
       </CardContent>
         <Button onClick={() => this.handleDelete(this.props.id)} variant="contained">Delete</Button>
-     <div style={{marginTop:"50px"}}>
-        <button onClick={this.artir}>Artır</button>
-        <span>{this.state.count}</span>
-        <button onClick={this.azalt}>Azalt</button>
-        <button onClick={this.sifirla}>Sifirla</button>
+     <div style={{marginTop:"50px", display:"flex", justifyContent:"space-around"}}>
+        <span style={{fontSize:"30px"}}>{this.state.count}</span>
+        <Button variant="contained"  onClick={this.artir}>Artır</Button>
+        <Button variant="contained" onClick={this.azalt}>Azalt</Button>
+        <Button variant="contained" onClick={this.sifirla}>Sifirla</Button>
       </div>
     </Card>
 
