@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component,useState } from 'react'
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import PersonCard from '../components/PersonCard';
@@ -9,7 +9,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import { BsBrowserSafari } from "react-icons/bs";
+
 export class Person extends Component {
+
   static defaultProps={
     persons:[]
   }
@@ -19,6 +22,7 @@ export class Person extends Component {
 <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+
           <IconButton
             size="large"
             edge="start"
@@ -34,6 +38,7 @@ export class Person extends Component {
         </Toolbar>
       </AppBar>
     </Box>
+          < BsBrowserSafari style={{fontSize:"50px", color: "blue"}}/>
 <Container maxWidth="lg" style={{marginTop:"50px"}}>
 <Grid container spacing={2}>
 {this.props.persons?.map((person,index)=>(
